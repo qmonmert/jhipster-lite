@@ -144,7 +144,7 @@ jobs:
         with:
           name: jacoco
       - name: 'Codecov: sending analysis...'
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
         with:
           files: jacoco.xml
           fail_ci_if_error: true
