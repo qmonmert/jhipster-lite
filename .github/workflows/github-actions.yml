@@ -99,7 +99,7 @@ jobs:
         id: setup
         uses: ./.github/actions/setup
       - name: 'Artifact: download JAR'
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: jhlite-jar
           path: ./tests-ci/
@@ -140,7 +140,7 @@ jobs:
       - name: 'Setup: checkout project'
         uses: actions/checkout@v2
       - name: 'Artifact: download JaCoCo report'
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: jacoco
       - name: 'Codecov: sending analysis...'
