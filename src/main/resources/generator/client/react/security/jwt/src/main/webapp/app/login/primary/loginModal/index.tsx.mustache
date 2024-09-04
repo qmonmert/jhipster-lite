@@ -22,7 +22,11 @@ const LoginModal = ({ open, onClose }: LoginModalType) => {
 
   const onSubmit = (loginData: LoginFunctionType) => {
     if (loginData.username && loginData.password) {
-      login({ ...loginData, setUsername, setToken });
+      login({ ...loginData, setUsername, setToken })
+        .catch((error) => {
+          setError(true);
+          console.error(error);
+        });
       setError(false);
       onClose();
     } else {
