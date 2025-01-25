@@ -75,6 +75,10 @@ public final class JHipsterModulesAssertions {
     return file("src/main/resources/generator/typescript/vitest.config.ts.mustache", "vitest.config.ts");
   }
 
+  public static ModuleFile viteReactConfigFile() {
+    return file("src/main/resources/generator/client/react/core/vite.config.ts.mustache", "vite.config.ts");
+  }
+
   public static ModuleFile eslintConfigFile() {
     return file("src/main/resources/generator/typescript/eslint.config.js.mustache", "eslint.config.js");
   }
